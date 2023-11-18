@@ -8,6 +8,7 @@
 </head>
 <body>
     <nav>
+        <img src="./images/badge.png" alt="logo" id="logo">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/products.html">Products</a></li>
@@ -16,40 +17,52 @@
     </nav>
 
     <main id="hero">
-        <div class="wrapper">
-            <div class="hero-img"></div>
-            <div class="hero-text">
-                <h1>Cine City Bakery</h1>
-                <p>Quality Uncompromised</p>
-            </div>
+        <div class="hero-img">
+            <img src="./images/loaves.jpeg" alt="">
+        </div>
+        <div class="hero-text">
+            <h1>Cine City Bakery</h1>
+            <p>Quality Uncompromised</p>
         </div>
     </main>
 
     <section id="services">
         <div class="section-wrapper">
-            <div class="item">
-                <div class="img"></div>
-                <h3>Products</h3>
+            <div class="item item1">
+                <div class="img">
+                    <img src="./images/demand-for-bakery-products.jpg" alt="baked goods" id="prod">
+                </div>
+                <div class="heading">
+                    <h3><a href="/products.html">Products</a></h3>
+                </div>
             </div>
-            <div class="item">
-                <div class="img"></div>
-                <h3>Delivery</h3>
+            <div class="item item2">
+                <div class="img">
+                    <img src="./images/delivery.jpeg" alt="delivery truck" id="delivery">
+                </div>
+                <div class="heading">
+                    <h3><a href="/">Delivery</a></h3>
+                </div>
             </div>
-            <div class="item">
-                <div class="img"></div>
-                <h3>Prices</h3>
+            <div class="item item3">
+                <div class="img">
+                    <img src="./images/priceslist.jpeg" alt="price tag" id="price">
+                </div>
+                <div class="heading">
+                    <h3><a href="/prices.html">Prices</a></h3>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="footer">
         <div>
-            <img src="" alt="">
+            <img src="./images/badge.png" alt="logo" class="logo">
         </div>
-        <form action="">
+        <form action=POST>
             <div class="city">
                 <label for="city">City: </label>
-                <input type="text">
+                <input type="text" id="city">
             </div>
             <div class="city">
                 <label for="address">Address: </label>
@@ -57,17 +70,10 @@
             </div>
             <div class="apt">
                 <label for="apt">Apt: </label>
-                <input type="text">
+                <input type="text" id="apt">
             </div>
             <button>Send info</button>
         </form>
-        <div>
-            <div class="links">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">Twitter</a>
-            </div>
-        </div>
     </footer>
 </body>
 </html>

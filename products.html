@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./products.css">
+        <title>Products</title>
+    </head>
+    <body>
+        <nav>
+            <img src="./images/badge.png" alt="logo" id="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/prices.html">Prices</a></li>
+            </ul>
+            <img src="./images/hamburger.png" alt="hamburger menu" id="burger">
+        </nav>
+        <div class="title">
+            <h2>Products</h2>
+        </div>
+
+        <section class="products">
+            <div class="product">
+                <img src="./images/wheatbread.jpeg" alt="bread">
+                <div class="heading">
+                    <h3>Bread</h3>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./images/donought.jpeg" alt="donought">
+                <div class="heading">
+                    <h3>Donought</h3>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./images/priceslist.jpeg" alt="cupcake">
+                <div class="heading">
+                    <h3>Cupcake</h3>
+                </div>
+            </div>
+            
+        </section>
+        <footer id="footer">
+            <div>
+                <img src="./images/badge.png" alt="logo" class="logo">
+            </div>
+            <form action=POST>
+                <div class="city">
+                    <label for="city">City: </label>
+                    <input type="text" id="city">
+                </div>
+                <div class="city">
+                    <label for="address">Address: </label>
+                    <textarea name="address" id="address" cols="20" rows="5"></textarea>
+                </div>
+                <div class="apt">
+                    <label for="apt">Apt: </label>
+                    <input type="text" id="apt">
+                </div>
+                <button>Send info</button>
+            </form>
+        </footer>
+    </body>
+    </html>

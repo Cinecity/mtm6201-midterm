@@ -4,11 +4,29 @@
 }
 
 body{
+    display: grid;
+    grid-template-rows: auto auto;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    border: solid 2px black;
-    width: 100%;
+    min-width: 100vw;
+    height: 100vh;
+}
+
+
+#logo{
+    width: 2em;
+    height: 3em;
+    margin-left: 3em;
+}
+
+.logo{
+    padding: 20px 10px;
+    background-color: white;
+    width: 10em;
+    height: 10em;
+}
+
+#burger{
+    display: none;
 }
 
 a{
@@ -16,21 +34,24 @@ a{
 }
 
 nav{
+    position: fixed;
+    z-index: 1000;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: yellow;
     height: 3.5rem;
     width: 100%;
-    border: solid 2px green;
+    
 }
 
 
 ul{
     display: flex;
     flex-direction: row;
-    border: solid 2px red;
+    
+    min-width: 20vw;
 }
 
 li{
@@ -38,32 +59,32 @@ li{
     margin: .5em 2rem;
 }
 
-main, section{
+main{
+    margin-top: 3.5rem;
     display: grid;
-    place-items: center;
-    width: 100%;
-    height: 30vh;
-    border: solid 2px blue;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 100%;
+    
 }
+
 section{
     display: grid;
     place-items: center;
     width: 100%;
-    height: 60vh;
-    border: solid 2px blue;
-}
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: solid 2px purple;
-    min-width: 100%;
-    min-height: 100%;
-    margin: .2em .2em;
-    background-color: grey;
+    
 }
 
-.wrapper div{
-    border: solid 2px white;
+.heading{
+    padding: 5rem 2rem;
+}
+
+
+
+.hero-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-text{
@@ -71,6 +92,7 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 .section-wrapper{
@@ -78,34 +100,48 @@ section{
     grid-template-columns: repeat(3, 1fr);
     min-width: 100%;
     min-height: 100%;
+    gap: 3em;
 }
 
 .item{
     display: flex;
     flex-direction: column;
-    border: solid 2px orange;
+    
     justify-content: center;
     align-items: center;
+}
+.item1, .item2, .item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: grey;
+}
+
+#prod, #delivery, #price{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-basis: 1;
 }
 
 footer{
     display: grid;
-    background-color: darkred;
-    grid-template-columns: repeat(3, 1fr);
-    height: 30vh;
-    min-width: 100%;
-
+    background-color: black;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0;
+    color: white;
 }
 
 
 form{
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    
     align-items: start;
     justify-content: center;
     text-align: justify;
     place-items: center;
+    
 }
 
 form div{
@@ -114,3 +150,21 @@ form div{
     margin: .3em 0px;
 }
 
+@media screen and (max-width: 600px){
+
+    main{
+        grid-auto-columns: auto;
+        grid-auto-flow: row;
+    }
+
+    #burger{
+        display: block;
+        padding: 3em 1em;
+    }
+
+    .section-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+}
